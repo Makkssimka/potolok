@@ -1,0 +1,186 @@
+
+@media screen and (max-width: 640px)
+    
+    //Кнопка сервиса
+    .service-button-wrapper
+        z-index: 50
+        left: -70px
+        top: calc(50% + 180px)
+        .service-button
+            padding: 10px 20px 10px
+            span
+                display: none
+    //Блолк меню
+    .menu-wrapper
+        top: 0
+        transition: top 0.5s
+    .menu-button-wrapper
+        right: 20px
+        top: 20px
+        .line-button
+            background-color: #000
+    .menu-back-button
+        color: #000
+        left: 20px
+        top: 15px
+    .logo-wrapper 
+        img
+            height: 60px
+            width: 60px
+
+    //Блок основного контента
+    .content-page-wrapper
+        flex-direction: column
+        .content-block
+            position: fixed
+            top: 0
+            right: 0
+            left: 0 
+            bottom: 0
+            padding: 90px 10px 0
+            width: calc(100% - 20px)
+            transition: left 0.5s
+        .empty-block
+            display: none
+        .black-block
+            top: 100%
+            .head-answer
+                font-size: 1.2em
+            .video-preview
+                display: none
+            .btn-white-empty
+                margin: 8px 0
+            .video-more
+                display: inline-block
+        .white-block
+            h1
+                font-size: 1.8em
+            h2
+                font-size: 1.2em
+            .close-btn
+                display: none
+            .image-content-wrapper
+                position: absolute
+                left: 0
+                right:  0
+                bottom: -15px
+            img
+                width: 100%
+                height: 50%
+            .result-block
+                img
+                    width: 65%
+    .poiner-wrapper
+        display: flex
+        transition: bottom 0.5s
+    .bg-top
+        height: 220px
+    
+    //Блок сервисы
+    .service-wrapper
+        .content-block
+            overflow-y: auto
+        .item-service
+            width: calc(100% - 40px)
+            display: block
+            padding: 15px 20px
+            img
+                height: auto
+
+    //Видео компонент стили
+    .video-container
+        display: flex
+        align-items: center
+        video
+            transform: translateZ(0)
+            position: relative
+            height: auto
+            width: 100%
+
+    //Контакты стили
+    .contact-container
+        right: -100%
+        width: 100%
+        overflow-y: auto
+        .adress-contact, .telephone-contact
+            text-align: center
+            .lnr
+                position: relative
+                left: 0
+                padding-right: 5px
+
+    //Открытие контактов
+    .open-contact
+        .menu-wrapper
+            right: 0
+            top: -100px
+            transition: top 0.5s 0.5s
+        .content-page-wrapper
+            width: 100%
+            transition: width 0.5s 0.5s
+        .content-block
+            left: -120vw
+            transition: left 0.5s 0.5s
+        .poiner-wrapper
+            bottom: -80px
+            transition: bottom 0.5s 0.5s
+        .service-button-wrapper
+            left: -50px !important
+            transition: left 0.5s 0.5s
+    //Стили галлереи
+    .gallery-item
+        position: relative
+        width: calc(85vw - 30px)
+        height: 45vh
+        transform: translateX(7.5vw)
+    .img-scale
+        position: relative
+        transform: scale(1.3)
+        z-index: 805
+    .design-wrapper
+        top: -15px
+        left: 0
+        height: auto
+        .design-image
+            display: none
+        .design-name
+            display: none
+        .design-description
+            opacity: 1
+            padding: 0 10px
+            max-width: 500px
+            a
+                opacity: 1
+
+    // Стили для мессенджеров
+    .call-wrapper
+        bottom: 5px
+        left: auto
+        right: 15px
+        flex-direction: column
+        .call-item
+            position: absolute
+            right: 0
+            bottom: 0
+            width: 130px
+            margin-bottom: 8px
+            transition: bottom 0.3s
+            a
+                padding: 8px 10px
+                flex-direction: row-reverse
+                border-radius: 25px
+            img
+                margin: 0 0 0 8px
+                height: 30px
+                width: 30px
+        .call-mobil
+            display: block
+    .call-active
+        .call-item
+            &:nth-child(1)
+                bottom: 52px
+            &:nth-child(2)
+                bottom: 104px
+            &:nth-child(3)
+                bottom: 156px
+                

@@ -1,0 +1,804 @@
+body
+    font-family: 'Montserrat', sans-serif
+    padding: 0
+    margin: 0
+    overflow: hidden
+
+//Сили кнопок
+.btn-block
+    text-align: center
+    padding: 15px 0
+.btn
+    display: inline-block
+    padding:  15px 25px
+    color: #fff
+    border: #fff solid 1px
+    border-radius: 50px
+    text-transform: uppercase
+    font-size: 0.7em
+    text-decoration: none
+    font-weight: 600
+    transition: all 0.3s
+.btn-blue
+    color: #fff
+    background: linear-gradient(180deg, rgba(32,42,70,1) 30%, rgba(0,0,0,1) 100%)
+    transition: transform 0.3s
+    &:hover
+        transform: scale(1.1)
+.btn-white-empty
+    &:hover
+        color: #000
+        background-color: #fff
+
+//Кнопка сервисы
+.service-button-wrapper
+    position: fixed
+    top: calc(50% + 140px)
+    transform: rotate(-90deg) 
+    transform-origin: 0 0
+    display: flex
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    color: #fff
+    left: -70px
+    .service-button
+        padding: 15px 50px 10px
+        text-align: center
+        background: linear-gradient(270deg, rgba(32,42,70,1) 0%, rgba(0,0,0,1) 100%)
+        transition: all 0.3s
+        .vertical-service-name
+            text-transform: uppercase
+            font-weight: 500
+            font-size: 0.85em
+
+//Стили меню
+.menu-wrapper
+    z-index: 800
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 15px 0 10px
+    transition: right 0.5s
+.logo-wrapper
+    img
+        width: auto
+        height: 80px
+        transition: filter 0.3s
+    &:hover
+        img
+            filter: grayscale(0)
+.menu-button-wrapper
+    position: absolute
+    right: 30px
+    top: 15px
+    width: 40px
+    height: 16px
+    cursor: pointer
+    .line-button
+        background-color: #fff
+        position: absolute
+        height: 2px
+        width: 40px
+        top: 0
+        right: 0
+        transition: background-color 0.3s, opacity 0.15s 0.15s, top 0.15s 0.15s, transform 0.15s
+        &:nth-child(1)
+            top: 0
+        &:nth-child(2)
+            top: 8px
+            width: 30px
+        &:nth-child(3)
+            top: 16px
+.menu-back-button
+    position: absolute
+    color: #ffffff
+    font-size: 30px
+    left: 30px
+    top: 15px
+    cursor: pointer
+
+    
+.open-menu
+    .line-button
+        transition: opacity 0.15s, top 0.15s, transform 0.15s 0.15s
+        &:nth-child(1)
+            top: 8px
+            transform: rotate(-45deg)
+        &:nth-child(2)
+            opacity: 0
+        &:nth-child(3)
+            top: 8px
+            transform: rotate(45deg)
+
+//Стили страницы меню
+.menu-page-wrapper
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: #fff
+    z-index: 100
+    display: flex
+    align-items: center
+    justify-content: center
+    .menu-list
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+    .item-route
+        text-transform: uppercase
+        font-size: 1.5em
+        font-weight: 500
+        text-decoration: none
+        padding: 5px 0
+        color: #105acb
+        filter: grayscale(1)
+        transition: filter 0.3s
+        &:hover
+            filter: grayscale(0)
+
+//Стили страницы контент
+.content-page-wrapper
+    width: 100%
+    height: 100vh
+    display: flex
+    transition: width 0.5s
+    .content-block
+        padding: 100px 25px 0
+        width: calc(33.3% - 50px)
+        transition: width 0.5s
+    .black-block
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(32,42,70,1) 100%)
+        padding: 100px 100px 0
+        width: calc(33.3% - 200px)
+        transition: width 0.5s, padding 0.5s
+    .empty-block
+        transition: width 0.5s
+.white-block
+    position: relative
+    h1
+        text-transform: uppercase
+        text-align: center
+        font-weight: 400
+        font-size: 2.4em
+        letter-spacing: 0.3em
+        margin-bottom: 0
+    h2
+        font-size: 1.3em
+        text-align: center
+        text-transform: uppercase
+        font-weight: 600
+        letter-spacing: 0.2em
+    .subhead
+        text-align: center
+        color: #999
+    .image-content-wrapper
+        position: absolute
+        left: -50px
+        right: -50px
+        bottom: -15px
+        display: flex
+        justify-content: flex-end
+        z-index: 40
+    img
+        width: 100%
+    .close-btn
+        position: absolute
+        right: -50px
+        top: 110px
+        font-size: 1.8em
+        color: #999
+        cursor: pointer
+        transition: transform 0.3s
+        &:hover  
+            transform: scale(1.2)
+.black-block
+    position: relative
+    .head-answer
+        padding-left: 15px
+        border-left: 3px solid #862d2d
+        text-transform: uppercase
+        color: #fff
+        font-size: 1.3em
+    .content-answer
+        color: #fff
+    .video-preview
+        position: relative
+        cursor: pointer
+        display: block
+        padding: 1em 0
+        img
+            width: 100%
+            height: auto
+        .video-icon
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            display: flex
+            justify-content: center
+            align-items: center
+        .lnr
+            font-size: 2em
+            padding: 0.6em
+            border-radius: 50%
+            border: 1px solid #fff
+            color: #fff
+            transition: transform 0.3s
+        &:hover
+           .lnr
+               transform: scale(1.2)
+    .price
+        color: #fff
+        font-size: 1.3em
+        text-align: left
+        margin: 0 0 25px
+        padding-left: 15px
+        border-left: 3px solid #862d2d
+    .number-block, .arrow-block
+        font-size: 1.2em
+        color: #fff
+        position: absolute
+        bottom: 15px
+    .number-block
+        left: 30px
+    .arrow-block
+        right: 30px
+        a
+            color: #ffffff70
+            text-decoration: none
+            transition: color 0.3s
+            &:hover
+                color: #ffffff
+    .video-more
+        display: none
+    .btn-white-empty
+        margin: 8px 0
+    .copyrigh
+        position: absolute
+        bottom: 15px
+        left: 15px
+        right: 15px
+        text-align: center
+        color: #fff
+        font-size: 0.8em
+
+
+.service-wrapper
+    overflow: auto
+    .empty-block
+        width: calc(25% - 50px)
+    .white-block
+        width: calc(50% - 50px)
+    .list-services
+        display: flex
+        flex-wrap: wrap
+    .item-service
+        text-align: center
+        width: calc(50% - 40px)
+        padding: 20px
+        color: #000
+        text-decoration: none
+        .service-image
+            width: 80%
+            margin: 0 auto
+            height: 145px
+            background-color: #e4e4e4
+            background-position: center center
+            background-size: cover
+        img
+            width: 80%
+            transition: all 0.3s
+        .header-service
+            padding: 0
+            margin: 8px 0 0
+            font-weight: 700
+            text-transform: uppercase
+            transition: all 0.3s
+        .desc-service
+            padding: 0
+            margin: 5px 0 0
+            color: #999
+        &:hover
+            .header-service
+                color: #105acb
+.black-bg
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(32,42,70,1) 100%)
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 100%
+    width: 100%
+.bg-top
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    height: 250px
+    z-index: -10
+    background: url('/images/6.png') center bottom no-repeat
+    background-size: cover
+.poiner-wrapper
+    display: none
+    color: #000000
+    position: fixed
+    bottom: 10px
+    left: calc(50% - 15px)
+    width: 30px
+    height: 60px
+    background-color: #ffffffcc
+    border-radius: 15px
+    z-index: 50
+    justify-content: center
+    align-items: center
+    .lnr
+        animation: pointer 2s infinite ease-in-out
+
+@keyframes pointer
+    0%
+        transform: translateY(15px)
+    75%
+        transform: translateY(-15px)
+    100%
+        transform: translateY(15px)
+        
+//Видео компонент стили
+.video-container
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(32,42,70,1) 100%)
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    video
+        transform: translateZ(0)
+        position: absolute
+        left: 0
+        bottom: 0
+        height: auto
+        width: 100%
+
+//Контакты стили
+.contact-container
+    position: fixed
+    background-color: #fff
+    right: -350px
+    width: 350px
+    top: 0
+    bottom: 0
+    transition: right 0.5s
+    .head-contact
+        text-align: center
+        text-transform: uppercase
+        color: #000
+        font-size: 1.3em
+        padding: 0 10px
+        position: relative
+        a
+            position: absolute
+            right: 15px
+            top: -4px
+            text-decoration: none
+            font-size: 1.3em
+            color: #999
+            transition: transform 0.3s
+            &:hover
+                transform: scale(1.2)
+    .adress-contact
+        text-transform: uppercase
+        color: #000
+        font-size: 1em
+        padding: 15px 25px 0 40px
+        position: relative
+        .lnr
+            font-weight: bold
+            position: absolute
+            left: 20px
+    .telephone-contact
+        display: block
+        text-transform: uppercase
+        color: #000
+        font-size: 1em
+        padding: 5px 25px 5px 40px
+        text-decoration: none
+        font-weight: 700
+        position: relative
+        .lnr
+            font-weight: bold
+            position: absolute
+            left: 20px
+    .map-wrapper
+        background-color: #e4e4e4
+        min-height: 300px
+    .btn-wrapper
+        text-align: center
+        margin: 15px 0
+
+//Открытие контактов
+.open-contact
+    .menu-wrapper
+        right: 350px
+        transition: right 0.5s 0.5s
+    .contact-container
+        right: 0
+        transition: right 0.5s 0.5s
+    .content-page-wrapper
+        width: calc(100% - 350px)
+        transition: width 0.5s 0.5s
+    .content-block
+        width: calc(42% - 50px)
+        transition: width 0.5s 0.5s
+    .black-block
+        padding: 80px 100px 0
+        width: calc(42% - 200px)
+        transition: width 0.5s 0.5s, padding 0.5s 0.5s
+    .empty-block
+        width: calc(16% - 50px)
+        transition: width 0.5s 0.5s
+
+// Обратный звонок
+.form-in-wrapper
+    position: relative
+.form-item
+    display: block
+    width: 70%
+    margin: 20px auto
+    position: relative
+    input
+        font-family: 'Montserrat', sans-serif
+        font-size: 1em
+        outline: none
+        width: calc(100% - 30px)
+        border: 1px solid #999
+        display: block
+        padding: 8px 14px
+        border-radius: 0
+        appearance: none
+        transition: all 0.5s
+        &:focus
+            border-color: #105acb
+            &~label
+                font-size: 0.6em 
+                color: #105acb
+                top: -8px
+        &:valid
+            border-color: #105acb
+            &~label
+                font-size: 0.6em 
+                color: #105acb
+                top: -8px
+    label
+        position: absolute
+        left: 14px
+        top: 8px
+        color: #999
+        cursor: text
+        background-color: #ffffff
+        padding: 0 5px
+        transition: all 0.3s
+    .form-status
+        position: absolute
+        font-size: 1.5em
+        right: -10px
+        top: 5px
+        display: flex
+        flex-direction: column
+        .lnr
+            position: absolute
+            top: 0
+            left: 0
+            opacity: 0
+        .lnr-cross-circle
+            color: #cc0000
+        .lnr-checkmark-circle
+            color: #2cc96b
+
+.form-button
+    text-align: center
+    .btn
+        transition: all 0.3s
+    .inactive
+        opacity: 0.5
+        pointer-events: none
+    .form-submit-text
+        margin-top: 15px
+        color: #999999
+        a
+            color: #000
+            text-decoration: none
+            border-bottom: 1px dashed #000
+.result-block
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+    z-index: -10
+    transform: translateX(150px)
+    text-align: center
+    img
+        width: 55%
+        height: auto
+
+//Стили галлереи
+.gallery-wrapper
+    position: fixed
+    top: 100px
+    bottom: 0
+    right: 0
+    left: 0
+    h2
+        padding: 0 10px
+        font-size: 1.3em
+        text-align: center
+        text-transform: uppercase
+        font-weight: 600
+        letter-spacing: 0.2em
+.gallery-block
+    display: flex
+    transition: transform 1s
+.gallery-item
+    position: relative
+    width: calc(56vw - 30px)
+    height: 65vh
+    padding: 0 15px
+    opacity: 0.2
+    transform: translateX(20.5vw)
+    cursor: pointer
+    transition: opacity 1s
+.active-item
+    opacity: 1
+    z-index: 999
+.name-item
+    text-transform: uppercase
+    text-align: center
+    font-size: 1.3em
+    font-weight: 700
+    margin-bottom: 0
+.desc-item
+    text-transform: uppercase
+    text-align: center
+    font-size: 0.8em
+    margin-top: 10px
+    color: #105acb
+    font-weight: 600
+.img-item
+    height: calc(100% - 80px)
+    width: 100%
+    background-position: center center
+    background-size: cover
+    background-color: #e4e4e4
+    transition: all 0.5s
+.img-scale
+    transform: scale(1.5)
+.design-wrapper
+    position: absolute
+    top: 25px 
+    left: 40px
+    height: 45px
+    display: flex
+    flex-direction: row
+    padding: 8px
+    background-color: #3279AF
+    border-radius: 40px
+    align-items: center
+    .design-image
+        width: 45px
+        height: 45px
+        img
+            width: 100%
+            height: 100%
+            border-radius: 50%
+    .design-description
+        opacity: 0
+        max-width: 0
+        padding: 0
+        overflow: hidden
+        color: #fff
+        font-weight: 600
+        display: flex
+        flex-direction: column
+        transition: max-width 0.3s 0.3s, padding 0.3s 0.3s , opacity 0.3s
+        a
+            font-size: 0.8em
+            color: #fff
+            opacity: 0.6
+            font-weight: 400
+            transition: opacity 0.3s
+            &:hover
+                opacity: 1
+    .design-flag
+        opacity: 0.6
+        font-size: 0.6em
+        font-weight: 400
+        color: #fff
+    &:hover
+        .design-description
+            opacity: 1
+            padding: 0 10px
+            max-width: 500px
+            transition: max-width 0.3s, padding 0.3s, opacity 0.3s 0.3s
+
+//Стили прелоадера
+.preloader-wrapper
+    z-index: 999
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: #fff
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: all 0.5s
+.invisible
+    opacity: 0
+    visibility: hidden
+.preloader-container
+    width: 146px
+    height: 146px
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    position: relative
+.text-wrapper
+    font-size: 1.5em
+    font-weight: 600
+    position: absolute
+    bottom: -60px
+    left: -80px
+    right: -80px
+    text-align: center
+    overflow: hidden
+    p
+        transform: translateY(80px)
+        animation: text-animation 1s 1.9s forwards
+    span
+        font-size: 0.8em
+        font-weight: 400
+.green-block
+    width: 0
+    height: 0
+    margin: 70px 3px 3px 70px
+    background-color: #64B148
+    animation: green-animation 0.5s forwards, opacity-animation 1s 2.9s infinite
+.orange-block
+    width: 0
+    height: 0
+    margin: 70px 70px 3px 3px
+    background-color: #FF8E30
+    border-radius: 50% 50% 50% 0
+    animation: orange-animation 1s 0.3s forwards
+.red-block
+    width: 0
+    height: 0
+    background-color: #EB5757
+    margin: 3px 70px 70px 3px
+    border-radius: 0 50% 50% 50%
+    animation: red-animation 1s 0.6s forwards
+.blue-block
+    width: 0
+    height: 0
+    background-color: #3279AF
+    margin: 3px 3px 70px 70px
+    border-radius: 50% 0 50% 50%
+    animation: blue-animation 1s 0.9s forwards
+@keyframes green-animation
+    0%
+        border-radius: 0
+        width: 0
+        height: 0
+        margin: 70px 3px 3px 70px
+    50%
+        border-radius: 0
+        width: 60px
+        height: 60px
+        margin: 10px 3px 3px 10px
+    100%
+        border-radius: 50% 50% 0 50%
+        width: 60px
+        height: 60px
+        margin: 10px 3px 3px 10px
+@keyframes orange-animation
+    0%
+        border-radius: 0
+        width: 0
+        height: 0
+        margin: 70px 70px 3px 3px
+    50%
+        border-radius: 0
+        width: 45px
+        height: 45px
+        margin: 25px 25px 3px 3px
+    100%
+        border-radius: 50% 50% 50% 0
+        width: 45px
+        height: 45px
+        margin: 25px 25px 3px 3px
+@keyframes red-animation
+    0%
+        border-radius: 0
+        width: 0
+        height: 0
+        margin: 3px 70px 70px 3px
+    50%
+        border-radius: 0
+        width: 45px
+        height: 45px
+        margin: 3px 15px 15px 3px
+    100%
+        border-radius: 0 50% 50% 50%
+        width: 45px
+        height: 45px
+        margin: 3px 15px 15px 3px
+@keyframes blue-animation
+    0%
+        border-radius: 0
+        width: 0
+        height: 0
+        margin: 3px 3px 70px 70px
+    50%
+        border-radius: 0
+        width: 70px
+        height: 70px
+        margin: 3px 3px 0 0
+    100%
+        border-radius: 50% 0 50% 50%
+        width: 70px
+        height: 70px
+        margin: 3px 3px 0 0
+@keyframes opacity-animation
+    50%
+        opacity: 0.1
+        
+@keyframes text-animation
+    0%
+        transform: translateY(80px)
+    100%
+        transform: translateY(0)
+
+// Стили для мессенджеров
+.call-wrapper
+    position: fixed
+    z-index: 800
+    bottom: 30px
+    left: 30px
+    transform: translateY(100px)
+    display: flex
+    .call-item
+        margin-right: 8px
+        a
+            border-radius: 19px
+            display: flex
+            align-items: center
+            background-color: #64B148
+            padding: 8px 12px
+            font-size: 0.8em
+            color: #ffffff
+            text-decoration: none
+        &:nth-child(2)
+            a
+                background-color: #EB5757
+        &:nth-child(3)
+            a
+                background-color: #3279AF
+        &:nth-child(4)
+            a
+                background-color: #FF8E30
+                
+        img
+            width: 22px
+            height: 22px
+            margin-right: 8px
+    .call-mobil
+        display: none      
+        
+@import "./_media"
